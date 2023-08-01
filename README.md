@@ -1,0 +1,3 @@
+- support more language 
+- saving history.
+- 
