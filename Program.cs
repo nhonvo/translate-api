@@ -1,4 +1,7 @@
+using System.Reflection;
 using api;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +14,9 @@ builder.Services.AddHttpClient("Azure_Translate", options =>
            {
                options.BaseAddress = new Uri(configuration.AzureTranslate.Endpoint);
            });
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+builder.Services.AddFluentValidationAutoValidation();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
