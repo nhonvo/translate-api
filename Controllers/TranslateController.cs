@@ -15,15 +15,20 @@ public class TranslateController : ControllerBase
     private string key = "";
     private string location = "";
     private string endpoint = "";
+    private readonly ILogger<TranslateController> _logger;
 
-    public TranslateController(AppConfiguration appConfiguration, IHttpClientFactory httpClientFactory)
+    public TranslateController(AppConfiguration appConfiguration, IHttpClientFactory httpClientFactory, ILogger<TranslateController> logger)
     {
         _appConfiguration = appConfiguration;
         _httpClientFactory = httpClientFactory;
         key = _appConfiguration.AzureTranslate.Key;
         location = _appConfiguration.AzureTranslate.Location;
         endpoint = _appConfiguration.AzureTranslate.Endpoint;
+        _logger = logger;
+
     }
+    [HttpGet]
+    public IActionResult Get() => Ok("Test");
 
     [HttpPost]
     public async Task<IActionResult> TranslateText(TranslateRequest request)
@@ -32,53 +37,61 @@ public class TranslateController : ControllerBase
 
         var client = _httpClientFactory.CreateClient("Azure_Translate");
 
-        object[] body = new object[] { new { Text = request.Text } };
+        object[] body = new object[] { new { request.Text } };
         var requestBody = JsonConvert.SerializeObject(body);
 
-        using (var res = new HttpRequestMessage())
+        try
         {
+            _logger.LogInformation("Translation request is being sent to Azure Cognitive Services.");
+
             // Build the request.
-            res.Method = HttpMethod.Post;
-            res.RequestUri = new Uri(endpoint + route);
-            res.Content = new StringContent(requestBody, Encoding.UTF8, "application/json");
-            res.Headers.Add("Ocp-Apim-Subscription-Key", key);
-            // location required if you're using a multi-service or regional (not global) resource.
-            res.Headers.Add("Ocp-Apim-Subscription-Region", location);
+            var content = new StringContent(requestBody, Encoding.UTF8, "application/json");
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", key);
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Region", location);
 
-            try
+            // Send the request and get response.
+            HttpResponseMessage response = await client.PostAsync(endpoint + route, content).ConfigureAwait(false);
+
+            // Send the request and get response.
+            //HttpResponseMessage response = await client.SendAsync(res).ConfigureAwait(false);
+
+            // Check for successful response.
+            if (response.IsSuccessStatusCode)
             {
-                // Send the request and get response.
-                HttpResponseMessage response = await client.SendAsync(res).ConfigureAwait(false);
+                // Read response as a string.
+                string result = await response.Content.ReadAsStringAsync();
 
-                // Check for successful response.
-                if (response.IsSuccessStatusCode)
-                {
-                    // Read response as a string.
-                    string result = await response.Content.ReadAsStringAsync();
+                // Dispose of the HttpResponseMessage to release resources.
+                response.Dispose();
+                List<TranslateResponse> translateResponse = JsonConvert.DeserializeObject<List<TranslateResponse>>(result);
+                string translatedText = translateResponse[0].Translations[0].Text;
+                _logger.LogInformation($"Translation succeeded. Translated text: {translatedText}");
 
-                    // Dispose of the HttpResponseMessage to release resources.
-                    response.Dispose();
-                    List<TranslateResponse> translateResponse = JsonConvert.DeserializeObject<List<TranslateResponse>>(result);
-                    string translatedText = translateResponse[0].Translations[0].Text;
-
-                    return Ok(translatedText);
-                }
-                else
-                {
-                    // Handle non-successful response (e.g., 404, 500, etc.).
-                    return BadRequest("Translation failed. HTTP status code: " + response.StatusCode);
-                }
+                return Ok(translatedText);
             }
-            catch (HttpRequestException ex)
+            else
             {
-                // Handle network-related errors.
-                return BadRequest("HTTP request failed: " + ex.Message);
+                _logger.LogError($"Translation failed. HTTP status code: {response.StatusCode}");
+
+                // Handle non-successful response (e.g., 404, 500, etc.).
+                return BadRequest("Translation failed. HTTP status code: " + response.StatusCode);
             }
-            catch (Exception ex)
-            {
-                // Handle other exceptions.
-                return StatusCode(500, "An error occurred: " + ex.Message);
-            }
+        }
+        catch (HttpRequestException ex)
+        {
+            // Log network-related errors
+            _logger.LogError("HTTP request failed: " + ex.Message);
+
+            // Handle network-related errors.
+            return BadRequest("HTTP request failed: " + ex.Message);
+        }
+        catch (Exception ex)
+        {
+            // Log other exceptions
+            _logger.LogError("An error occurred: " + ex.Message);
+
+            // Handle other exceptions.
+            return StatusCode(500, "An error occurred: " + ex.Message);
         }
     }
 }
