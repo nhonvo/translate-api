@@ -483,3 +483,5 @@ Properties/ServiceDependencies/truongnhon-translate - Web Deploy/profile.arm.jso
 Properties/serviceDependencies.truongnhon-translate - Zip Deploy.json
 Properties/ServiceDependencies/truongnhon-translate - Zip Deploy/apis1.arm.json
 Properties/ServiceDependencies/truongnhon-translate - Zip Deploy/profile.arm.json
+.vscode/launch.json
+.vscode/tasks.json

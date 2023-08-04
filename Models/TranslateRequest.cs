@@ -11,9 +11,9 @@ namespace api.Models
     public class TranslateResponse
     {
         [JsonProperty("translations")]
-        public List<Translation> Translations { get; set; }
+        public List<Translation1> Translations { get; set; }
     }
-    public class Translation
+    public class Translation1
     {
         [JsonProperty("text")]
         public string Text { get; set; } = string.Empty;

@@ -1,5 +1,6 @@
 using System.Reflection;
 using api;
+using api.Services;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Serilog;
@@ -14,14 +15,17 @@ var key = configuration.AzureTranslate.Key;
 var location = configuration.AzureTranslate.Location;
 var endpoint = configuration.AzureTranslate.Endpoint;
 builder.Services.AddSingleton(configuration);
-// builder.Services.AddHttpClient("Azure_Translate", options =>
-//            {
-//                options.BaseAddress = new Uri(configuration.AzureTranslate.Endpoint);
-//                options.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", key);
-//                options.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Region", location);
-//            });
+builder.Services.AddHttpClient("Azure_Translate", options =>
+           {
+               options.BaseAddress = new Uri(configuration.AzureTranslate.Endpoint);
+               options.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", key);
+               options.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Region", location);
+           });
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 builder.Services.AddFluentValidationAutoValidation();
+
+builder.Services.AddTransient<ITranslateService, TranslateService>();
+
 
 // builder.Services.AddCors(options =>
 // {
