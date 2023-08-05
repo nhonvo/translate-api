@@ -1,3 +1,5 @@
 - support more language 
 - saving history.
-- 
+- translate tool
+- dictionary search.
+- advanced translation: auto detection language.

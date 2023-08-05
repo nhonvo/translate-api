@@ -14,7 +14,12 @@ public class TranslateController : BaseController
         _translateService = translateService;
     }
 
-    [HttpPost("from={from}&to={to}")]
-    public async Task<IActionResult> Translate(TranslateRequest request, string? from = "en", string? to = "vi")
+    [HttpPost("to={to}")]
+    public async Task<IActionResult> Translate(TranslateRequest request, string? from = null, string? to = "vi")
         => Ok(await _translateService.Translate(request, from, to));
+
+    [HttpPost("LookUp/from={from}&to={to}")]
+    public async Task<IActionResult> LookUp(TranslateRequest request, string? from = "en", string? to = "vi")
+        => Ok(await _translateService.LookUp(request, from, to));
+
 }
