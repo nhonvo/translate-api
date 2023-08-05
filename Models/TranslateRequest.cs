@@ -5,8 +5,6 @@ namespace api.Models
     public class TranslateRequest
     {
         public string Text { get; set; } = string.Empty;
-        public string? From { get; set; } = "en";
-        public string? To { get; set; } = "vi";
     }
     public class TranslateResponse
     {
