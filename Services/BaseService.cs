@@ -97,16 +97,9 @@ namespace api.Services
             }
             catch (Exception exception)
             {
-                // var response = new APIResponse
-                // {
-                //     Message = exception.ToString(),
-                //     Succeeded = false,
-                // };
+                
                 _logger.LogError("An error occurred: " + exception.Message);
                 throw new Exception(exception.ToString());
-                // var res = JsonConvert.SerializeObject(response);
-                // var APIresponse = JsonConvert.DeserializeObject<T>(res);
-                // return APIresponse;
             }
         }
     }

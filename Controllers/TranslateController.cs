@@ -14,6 +14,10 @@ public class TranslateController : BaseController
         _translateService = translateService;
     }
 
+    [HttpGet]
+    public IActionResult Get()
+        => Ok("nothing");
+
     [HttpPost("to={to}")]
     public async Task<IActionResult> Translate(TranslateRequest request, string? from = null, string? to = "vi")
         => Ok(await _translateService.Translate(request, from, to));
