@@ -8,7 +8,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Am
@@ -23,8 +22,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class As
@@ -32,7 +29,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Az
@@ -53,7 +49,6 @@ namespace api.Models
     {
         public string name { get; set; }
         public string nativeName { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Bg
@@ -61,8 +56,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Bn
@@ -70,8 +63,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Bo
@@ -85,7 +76,6 @@ namespace api.Models
     {
         public string name { get; set; }
         public string nativeName { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Bs
@@ -93,7 +83,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Ca
@@ -101,7 +90,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Cs
@@ -109,7 +97,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Cy
@@ -117,7 +104,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Da
@@ -125,7 +111,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class De
@@ -133,7 +118,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Dictionary
@@ -215,8 +199,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class En
@@ -224,7 +206,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Es
@@ -232,7 +213,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Et
@@ -240,7 +220,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Eu
@@ -255,8 +234,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Fi
@@ -264,7 +241,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Fil
@@ -293,7 +269,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class FrCA
@@ -322,7 +297,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Gu
@@ -330,7 +304,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Ha
@@ -345,8 +318,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Hi
@@ -354,8 +325,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Hr
@@ -363,7 +332,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Hsb
@@ -385,7 +353,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Hy
@@ -400,7 +367,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Ig
@@ -422,7 +388,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class It
@@ -430,7 +395,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Iu
@@ -452,8 +416,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Ka
@@ -468,7 +430,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Km
@@ -490,7 +451,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Ko
@@ -498,15 +458,12 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Ks
     {
         public string name { get; set; }
         public string nativeName { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Ku
@@ -521,7 +478,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Ln
@@ -543,7 +499,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Lug
@@ -558,7 +513,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Lzh
@@ -573,7 +527,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Mg
@@ -595,7 +548,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Ml
@@ -603,7 +555,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class MnCyrl
@@ -611,14 +562,12 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Mni
     {
         public string name { get; set; }
         public string nativeName { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class MnMong
@@ -633,7 +582,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Ms
@@ -641,7 +589,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Mt
@@ -649,7 +596,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Mww
@@ -657,7 +603,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class My
@@ -672,7 +617,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Ne
@@ -680,7 +624,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Nl
@@ -688,7 +631,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Nso
@@ -710,7 +652,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Otq
@@ -725,7 +666,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Pl
@@ -733,7 +673,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Prs
@@ -755,7 +694,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class PtPT
@@ -770,14 +708,11 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
-    public class Language
+    public class LanguageRoot
     {
         public Translation3 translation { get; set; }
-        public Transliteration transliteration { get; set; }
-        public Dictionary dictionary { get; set; }
     }
 
     public class Ru
@@ -785,8 +720,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Run
@@ -807,7 +740,6 @@ namespace api.Models
     {
         public string name { get; set; }
         public string nativeName { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Script
@@ -824,7 +756,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Si
@@ -832,7 +763,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Sk
@@ -840,7 +770,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Sl
@@ -848,7 +777,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Sm
@@ -884,7 +812,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class SrLatn
@@ -892,8 +819,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class St
@@ -908,7 +833,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Sw
@@ -916,7 +840,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Ta
@@ -924,8 +847,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Te
@@ -933,14 +854,12 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Tg
     {
         public string name { get; set; }
         public string nativeName { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Th
@@ -948,8 +867,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Ti
@@ -971,7 +888,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class TlhPiqd
@@ -1008,7 +924,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Translation3
@@ -1235,7 +1150,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Ty
@@ -1257,8 +1171,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Ur
@@ -1266,8 +1178,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Uz
@@ -1282,7 +1192,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class Xh
@@ -1318,8 +1227,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
-        public List<Translation3> translations { get; set; }
     }
 
     public class ZhHant
@@ -1327,7 +1234,6 @@ namespace api.Models
         public string name { get; set; }
         public string nativeName { get; set; }
         public string dir { get; set; }
-        public List<Script> scripts { get; set; }
     }
 
     public class Zu

@@ -9,7 +9,9 @@ public static class CorsExtension
             options.AddDefaultPolicy(
                 policy =>
                 {
-                    policy.WithOrigins("https://nhonvo.github.io/translate/", "http://localhost:3000");
+                    policy.WithOrigins("https://nhonvo.github.io", "http://localhost:3000")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
                 });
         });
 

@@ -1,7 +1,6 @@
 ﻿using api.Enum;
 using api.Models;
 using Newtonsoft.Json;
-using System.Net.Http.Headers;
 using System.Text;
 namespace api.Services
 {
@@ -35,14 +34,9 @@ namespace api.Services
                 HttpRequestMessage message = new();
                 message.Headers.Add("Accept", "application/json");
                 message.RequestUri = new Uri(apiRequest.Url);
-                if (apiRequest.Token != null)
-                {
-                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiRequest.Token);
-                }
+              
                 if (apiRequest.Data != null)
                 {
-                    // var s = new JsonSerializerSettings { DateFormatHandling = DateFormatHandling.MicrosoftDateFormat };
-                    // message.Content = new StringContent(JsonConvert.SerializeObject(apiRequest.Data), Encoding.UTF8, "application/json");
                     object[] body = new object[] {
                          new {
                              Text
