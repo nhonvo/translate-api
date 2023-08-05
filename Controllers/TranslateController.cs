@@ -9,14 +9,10 @@ namespace api.Controllers;
 public class TranslateController : ControllerBase
 {
 
-    private readonly ILogger<TranslateController> _logger;
     private readonly ITranslateService _translateService;
 
-    public TranslateController(
-        ILogger<TranslateController> logger, ITranslateService translateService)
+    public TranslateController(ITranslateService translateService)
     {
-
-        _logger = logger;
         _translateService = translateService;
     }
 

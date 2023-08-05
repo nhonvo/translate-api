@@ -1,5 +1,7 @@
 namespace api.Models
 {
+#nullable disable
+
     public class TranslationResult
     {
         public DetectedLanguage DetectedLanguage { get; set; }

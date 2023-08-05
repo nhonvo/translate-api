@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 
 namespace api.Models
 {
+#nullable disable
     public class TranslateRequest
     {
         public string Text { get; set; } = string.Empty;

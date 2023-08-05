@@ -1,8 +1,9 @@
 namespace api
 {
+#nullable disable
     public class AppConfiguration
     {
-        public AzureTranslate AzureTranslate { get; set; } 
+        public AzureTranslate AzureTranslate { get; set; }
     }
     public class AzureTranslate
     {

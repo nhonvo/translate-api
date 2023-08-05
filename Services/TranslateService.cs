@@ -8,7 +8,7 @@ namespace api.Services
         private readonly AppConfiguration _appConfiguration;
         private readonly IHttpClientFactory _httpClientFactory;
         private string route = "";
-        private string endpoint = "";
+        private readonly string endpoint = "";
         private readonly ILogger<TranslateService> _logger;
         public TranslateService(AppConfiguration appConfiguration,
             IHttpClientFactory httpClientFactory,
@@ -95,7 +95,7 @@ namespace api.Services
 
                     // Dispose of the HttpResponseMessage to release resources.
                     response.Dispose();
-                    List<TranslateResponse> translateResponse = JsonConvert.DeserializeObject<List<TranslateResponse>>(result);
+                    List<TranslateResponse> translateResponse = JsonConvert.DeserializeObject<List<TranslateResponse>>(result)!;
                     string translatedText = translateResponse[0].Translations[0].Text;
                     _logger.LogInformation($"Translation succeeded. Translated text: {translatedText}");
 
